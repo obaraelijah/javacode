@@ -1,2 +1,2 @@
 # javacode
-Practice tasks
+Mini projects
