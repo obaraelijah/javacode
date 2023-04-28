@@ -1,5 +1,7 @@
 package studentdatabaseapp;
 
+import java.util.Scanner;
+
 public class Student
 {
     private String firstname;
@@ -10,8 +12,20 @@ public class Student
     private int tuitionBalance;
     private int costOfCourse = 600;
 
-
     //constructor -> prompt user to enter students name and year
+    public Student() 
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter student first name: ");
+        this.firstname = in.nextLine();
+        
+        System.out.print("Enter student last name: ");
+        this.lastname = in.nextLine();
+
+        System.out.print("1 - Freshman\n2 - sophomore\n3 - Juniour\n4 - Seniour\nEnter student class level: ");
+        this.firstname = in.nextLine();
+    }
+    
 
 
     // gen uique id
@@ -25,7 +39,7 @@ public class Student
 
     //pay tuition
 
-    
+
     // show status
     
 }
