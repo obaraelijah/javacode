@@ -13,14 +13,19 @@ public class Student
 
     //constructor -> prompt user to enter students name and year
 
+
     // gen uique id
+
 
     // enroll courses
 
+
     //view balance 
+
 
     //pay tuition
 
+    
     // show status
     
 }
