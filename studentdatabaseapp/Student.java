@@ -6,7 +6,7 @@ public class Student
 {
     private String firstname;
     private String lastname;
-    private String gradeYear;
+    private int gradeYear;
     private int studentsID;
     private String courses;
     private int tuitionBalance;
@@ -23,7 +23,8 @@ public class Student
         this.lastname = in.nextLine();
 
         System.out.print("1 - Freshman\n2 - sophomore\n3 - Juniour\n4 - Seniour\nEnter student class level: ");
-        this.firstname = in.nextLine();
+        this.gradeYear = in.nextInt();
+        System.out.println(firstname + " " + lastname + " " + gradeYear);
     }
     
 
