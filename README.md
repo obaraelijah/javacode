@@ -1,2 +1,2 @@
-# java mini projects for relearnig java
+# mini projects for relearnig java
 Mini projects
