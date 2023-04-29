@@ -7,10 +7,11 @@ public class Student
     private String firstname;
     private String lastname;
     private int gradeYear;
-    private int studentsID;
+    private String studentID;
     private String courses;
     private int tuitionBalance;
-    private int costOfCourse = 600;
+    private static int costOfCourse = 600;
+    private static int id = 1000;
 
     //constructor -> prompt user to enter students name and year
     public Student() 
@@ -24,12 +25,23 @@ public class Student
 
         System.out.print("1 - Freshman\n2 - sophomore\n3 - Juniour\n4 - Seniour\nEnter student class level: ");
         this.gradeYear = in.nextInt();
-        System.out.println(firstname + " " + lastname + " " + gradeYear);
-    }
-    
 
+        setStudentID();
+
+        System.out.println(firstname + " " + lastname + " " + gradeYear + studentID);
+
+
+    }
 
     // gen uique id
+    private void setStudentID()
+    {
+        //grade level + static id
+        id++;
+        this.studentID =  gradeYear + "" + id;
+
+
+    }
 
 
     // enroll courses
