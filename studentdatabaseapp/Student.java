@@ -80,7 +80,12 @@ public class Student
         viewBalance();
 
     }
-
     // show status
+    public String toString()
+    {
+        return "Name: " + firstname + " " + lastname + 
+                "\nCourses Enrolled:" + courses + 
+                "\nBalance: Ksh." + tuitionBalance; 
+    }
     
 }
