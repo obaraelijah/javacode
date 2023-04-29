@@ -13,23 +13,24 @@ public class Student
     private static int costOfCourse = 600;
     private static int id = 1000;
 
-    //constructor -> prompt user to enter students name and year
+    //const
     public Student() 
     {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter student first name: ");
-        this.firstname = in.nextLine();
-        
-        System.out.print("Enter student last name: ");
-        this.lastname = in.nextLine();
+        try (Scanner in = new Scanner(System.in)) 
+        {
+            System.out.print("Enter student first name: ");
+            this.firstname = in.nextLine();
+            
+            System.out.print("Enter student last name: ");
+            this.lastname = in.nextLine();
 
-        System.out.print("1 - Freshman\n2 - sophomore\n3 - Juniour\n4 - Seniour\nEnter student class level: ");
-        this.gradeYear = in.nextInt();
-
+            System.out.print("1 - Freshman\n2 - sophomore\n3 - Juniour\n4 - Seniour\nEnter student class level: ");
+            this.gradeYear = in.nextInt();
+        }
         setStudentID();
     }
 
-    // gen uique id
+    // uique id
     private void setStudentID()
     {
         //grade level + static id
@@ -40,19 +41,20 @@ public class Student
     // enroll courses
     public void enroll()
     {
-        // get inside a loop, user hits 0 when done enrolling
         do{
             System.out.print("Enter course to enroll (Q to quit): ");
-            Scanner in = new Scanner(System.in);
-            String course =  in.nextLine();
-            if (!course.equals("Q"))
+            try (Scanner in = new Scanner(System.in))
             {
-                courses = courses + "\n " + course;
-                tuitionBalance = tuitionBalance + costOfCourse;
+                String course =  in.nextLine();
+                if (!course.equals("Q"))
+                {
+                    courses = courses + "\n " + course;
+                    tuitionBalance = tuitionBalance + costOfCourse;
+                }
+                else {
+                     break;
+                     }
             }
-            else {
-                 break;
-                 }
         }   while ( 1 != 0);
 
     }
@@ -68,10 +70,12 @@ public class Student
     {
         viewBalance();
         System.out.print("Enter your payment: Ksh.");
-        Scanner in = new Scanner(System.in);
-        int payment = in.nextInt();
-        tuitionBalance = tuitionBalance - payment;
-        System.out.println("Thank you for your payments of Ksh." + payment);
+        try (Scanner in = new Scanner(System.in))
+        {
+            int payment = in.nextInt();
+            tuitionBalance = tuitionBalance - payment;
+            System.out.println("Thank you for your payments of Ksh." + payment);
+        }
         viewBalance();
 
     }
