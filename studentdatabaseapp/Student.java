@@ -27,10 +27,6 @@ public class Student
         this.gradeYear = in.nextInt();
 
         setStudentID();
-
-        System.out.println(firstname + " " + lastname + " " + gradeYear + studentID);
-
-
     }
 
     // gen uique id
@@ -51,14 +47,13 @@ public class Student
             String course =  in.nextLine();
             if (!course.equals("Q"))
             {
-                courses = courses + "\n" + course;
+                courses = courses + "\n " + course;
                 tuitionBalance = tuitionBalance + costOfCourse;
             }
             else {
                  break;
                  }
         }   while ( 1 != 0);
-        System.out.println("ENROLLED IN: " + courses);
 
     }
 
@@ -84,6 +79,8 @@ public class Student
     public String toString()
     {
         return "Name: " + firstname + " " + lastname + 
+                "\nGrade level" + gradeYear +
+                "\nStudent ID" + studentID +
                 "\nCourses Enrolled:" + courses + 
                 "\nBalance: Ksh." + tuitionBalance; 
     }
