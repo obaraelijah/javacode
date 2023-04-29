@@ -49,7 +49,7 @@ public class Student
                 if (!course.equals("Q"))
                 {
                     courses = courses + "\n " + course;
-                    tuitionBalance = tuitionBalance + costOfCourse;
+                    tuitionBalance += costOfCourse;
                 }
                 else {
                      break;
