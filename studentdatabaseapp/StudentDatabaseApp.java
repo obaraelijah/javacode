@@ -5,8 +5,7 @@ public class StudentDatabaseApp
     public static void main(String[] args)
     {
         Student stud1 = new Student();
-     // how many users we want to add
+        stud1.enroll();
      
-     // create a number of new stdents   
     }
 }
