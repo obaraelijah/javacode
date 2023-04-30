@@ -34,34 +34,34 @@ public class Album {
         if(findSong(title) == null)
         {
             songs.add(new Song(title, duration));
-            System.out.println(title + "successfully added to the list");
+            // System.out.println(title + "successfully added to the list");
         } else {
-            System.out.println("Song with name " + title + "already exists");
+            // System.out.println("Song with name " + title + "already exists");
         }
         return false;
         
     }
 
-    public boolean addToPLayList(int trackNumber, LinkedList<Song> PlayList)
+    public boolean addToPlayList(int trackNumber, LinkedList<Song> PlayList)
     {
         int index = trackNumber - 1;
         if(index > 0 && index <= this.songs.size()){
             PlayList.add(this.songs.get(index));
             return true;
         }
-        System.out.println("this album does not have song with tracknumber" + trackNumber);
+        // System.out.println("this album does not have song with tracknumber" + trackNumber);
         return false;
     
     }
 
-    public boolean addToPLayList(String title, LinkedList<Song> Playlist){
+    public boolean addToPlayList(String title, LinkedList<Song> PlayList){
         for(Song checkedSong : this.songs){
             if (checkedSong.getTitle().equals(title)){
-                Playlist.add(checkedSong);
+                PlayList.add(checkedSong);
                 return true;
             }
         }
-        System.out.println(title + "there is no search song in album");
+        // System.out.println(title + "there is no search song in album");
         return false;
     }
 
