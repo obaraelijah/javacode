@@ -1,13 +1,30 @@
 package SongPlayListApp;
 
 public class Song {
-    String name;
-    double duration;
+    private String title;
+    private double duration;
 
-    public Song(String name, double duration)
-    {
-        this.name = name;
+    public Song(String title, double duration) {
+        this.title = title;
         this.duration = duration;
+    }
+    public Song(){
 
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public double getDuration() {
+        return duration;
+    }
+
+    @Override
+    public String toString() {
+        return "Song{" +
+                "title='" + title + '\'' +
+                ", duration=" + duration +
+                '}';
     }
 }
