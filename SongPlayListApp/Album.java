@@ -1,6 +1,7 @@
 package SongPlayListApp;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Album {
     private String name;
@@ -39,5 +40,17 @@ public class Album {
         }
         return false;
         
+    }
+
+    public boolean addToPLayList(int trackNumber, LinkedList<Song> PlayList)
+    {
+        int index = trackNumber - 1;
+        if(index > 0 && index <= this.songs.size()){
+            PlayList.add(this.songs.get(index));
+            return true;
+        }
+        System.out.println("this album does not have song with tracknumber" + trackNumber);
+        return false;
+    
     }
 }
