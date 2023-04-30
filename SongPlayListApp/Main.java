@@ -52,7 +52,49 @@ public class Main {
             printMenu();
         }
 
-        
+        while(!quit){
+            int action = sc.nextInt();
+            sc.nextLine();
+
+            switch (action){
+
+                case 0:
+                    System.out.println("Playlist complete");
+                    quit = true;
+                    break;
+                
+                case 1:
+                    if(!forward){
+                        if(listIterator.hasNext()){
+                            listIterator.next();
+                        }
+                        forward = true;
+                    } 
+                    if(listIterator.hasNext()){
+                        System.out.println("Now playing "+listIterator.next().toString());
+                    }else {
+                        System.out.println("no song available, reached to the end of the list");
+                        forward = false;
+                    }
+                    break;
+                    
+                case 2:
+                if(forward){
+                    if (listIterator.hasPrevious()){
+                        listIterator.previous();
+                    }
+                    forward = false;
+                }
+                if(listIterator.hasPrevious()){
+                    System.out.println("Now playing "+listIterator.previous().toString());
+                }else {
+                    System.out.println("we are the first song");
+                    forward = false;
+                }
+                break;
+            }
+        }
+
 
     }
 
