@@ -53,4 +53,16 @@ public class Album {
         return false;
     
     }
+
+    public boolean addToPLayList(String title, LinkedList<Song> Playlist){
+        for(Song checkedSong : this.songs){
+            if (checkedSong.getTitle().equals(title)){
+                Playlist.add(checkedSong);
+                return true;
+            }
+        }
+        System.out.println(title + "there is no search song in album");
+        return false;
+    }
+
 }
