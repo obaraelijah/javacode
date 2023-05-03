@@ -2,8 +2,8 @@ package InterfaceDemo;
 
 public interface Telephone {
     void powerOn();
-    void dial(String phoneNUmber);
+    void dial(String phoneNumber);
     void answer();
-    boolean callPhone();
+    boolean callPhone(String phoneNUmber);
     boolean isRinging();
 }
