@@ -26,7 +26,7 @@ public class MobilePhone implements Telephone{
            System.out.println("Answering the desk phone");
            isRinging = false; 
         }else {
-            System.out.println("Phone is not ringing");
+            
         }
     }
 
@@ -36,6 +36,7 @@ public class MobilePhone implements Telephone{
         isRinging = true;
         System.out.println("Phone is ringing");
        }else {
+        System.out.println("Either wrong number entered or phon eis off");
         isRinging = false;
        }
        return isRinging;
