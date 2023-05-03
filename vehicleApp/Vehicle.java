@@ -11,6 +11,8 @@ public class Vehicle {
         this.currentDirection = 0;
     }
 
-
-    
+    public void steer(int direction){
+        
+    }
+        
 }
