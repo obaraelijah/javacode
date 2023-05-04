@@ -2,9 +2,9 @@ package vehicleApp;
 
 public class Car extends Vehicle {
     
-    private int wheels;
+    protected static int wheels;
     private String type;
-    private int doors;
+    protected int doors;
     private int gears;
     private boolean isManual;
     private int currentGear;
