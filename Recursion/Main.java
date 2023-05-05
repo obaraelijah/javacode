@@ -20,6 +20,9 @@ public class Main {
 
         //6
         System.out.println("Mobile speakers: " + mobileSpeakers(4));
+
+        //sum
+        System.out.println("Sum: " + sum(145));
     }
 
     public static void printNumbers(int num ) {
@@ -74,6 +77,14 @@ public class Main {
             } else {
                 return 1 + mobileSpeakers(mobiles - 1);
             }
+        }
+    }
+
+    public static int sum(int num) {
+        if(num <= 9) {
+            return num;
+        } else {
+            return num % 10 + sum(num / 10);
         }
     }
 }
