@@ -14,6 +14,12 @@ public class Main {
 
         // factorial
         System.out.println("Factorial: " + factorial(4));
+
+        //fibonnacci
+        System.out.println("Fibonnacci: " + fibonacci(6));
+
+        //6
+        System.out.println("Mobile speakers: " + mobileSpeakers(4));
     }
 
     public static void printNumbers(int num ) {
@@ -46,6 +52,28 @@ public class Main {
             return 1;
         } else {
             return num * factorial(num - 1);
+        }
+    }
+
+    public static int fibonacci(int num) {
+        if(num == 0 ) {
+            return 0;
+        } if(num == 1) {
+            return 1;
+        } else {
+            return fibonacci(num - 1) + fibonacci(num - 2);
+        }
+    }
+
+    public static int mobileSpeakers(int mobiles) {
+        if(mobiles == 0) {
+            return 0;
+        } else {
+            if(mobiles % 2 == 0) {
+                return 2 + mobileSpeakers(mobiles - 1);
+            } else {
+                return 1 + mobileSpeakers(mobiles - 1);
+            }
         }
     }
 }
