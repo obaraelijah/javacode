@@ -23,6 +23,9 @@ public class Main {
 
         //sum
         System.out.println("Sum: " + sum(145));
+
+        //count5
+        System.out.println("Number: " + count5(15547845));
     }
 
     public static void printNumbers(int num ) {
